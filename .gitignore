@@ -1,12 +1,8 @@
 # Node.js
-.npmrc
 node_modules/
 
-# TypeScript
+# TypeScript build
 dist/
 
 # macOS
 .DS_Store
-
-# Jest coverage
-coverage/
