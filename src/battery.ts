@@ -42,7 +42,8 @@ export class Battery {
    *
    * @param durationHours - length of the period that power is transferred
    *  as a number of hours (may be fractional)
-   * @param powerKw - average power drawn during durationHours
+   * @param powerKw - average power drawn during durationHours. A negative
+   *  value indicates charging, a positive value indicates discharging.
    */
   public transfer(durationHours: number, powerKw: number): void {
     if (powerKw > 0) {
@@ -56,7 +57,7 @@ export class Battery {
    * Provides the current state-of-charge
    *
    * @returns the state of charged expressed as a decimal percentage
-   *          (e.g. 0.9 for 90% of capacity)
+   *  (e.g. 0.9 for 90% of capacity)
    */
   public getStateOfChargePercent(): number {
     return this.currentChargeKwh / this.capacityKwh
